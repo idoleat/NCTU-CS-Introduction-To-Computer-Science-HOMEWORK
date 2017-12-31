@@ -4,4 +4,4 @@ html_doc=urllib.request.urlopen("http://www.shopping.com/camera/products?sb=1&CL
 soup = BeautifulSoup(html_doc)
 
 for link in soup.find_all('a'):
-    print(link.get('href'))
+    print(link.get('src'))
