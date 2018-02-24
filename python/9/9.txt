@@ -1,0 +1,97 @@
+1.You will use the mbox.txt and mbox-short.txt files. This program will prompt the user for a file name and then open the file and read the entire file looking for lines that start with "Subject: [sakai] svn commit:" like the following:
+ 
+Subject: [sakai] svn commit: r39772 - content/branches/sakai_2-5-x/ ...
+Subject: [sakai] svn commit: r39771 - in bspace/site-manage/sakai_2-4-x ...
+Subject: [sakai] svn commit: r39770 - site-manage/branches/sakai_2-5-x/ ...
+Subject: [sakai] svn commit: r39769 - in gradebook/trunk/app/ui/src ...
+ 
+These indicate the revision number of a source modification (r39770) and the file(s) that were modified.  The output we desire is to extract information from each of these lines that includes the revision number and top-level folder where the modification was done:
+ 
+r39772 content
+r39771 bspace
+r39770 site-manage
+r39769 gradebook
+...
+There were 27 subject lines
+ 
+Also print the number of properly formatted "Subject:" lines your program finds in the input data
+ 
+Note: There are two different line formats.   Some have the word "in" in the subject line and others do not.  So your code needs to check for the "in" in the subject line and extract the data so that you print the correct data regardless of the format of the input line.  For the following lines, the bolded information is what we want to see:
+ 
+Subject: [sakai] svn commit: r39772 - content/branches/sakai_2-5-x/ ...
+Subject: [sakai] svn commit: r39771 - in bspace/site-manage/sakai_2-4-x ...
+Subject: [sakai] svn commit: r39770 - site-manage/branches/sakai_2-5-x/ ...
+Subject: [sakai] svn commit: r39769 - in gradebook/trunk/app/ui/src ...
+
+ 
+Running the Program
+ 
+Here is the output from mbox-short.txt:
+ 
+Enter a file name: mbox-short.txt
+r39772 content
+r39771 bspace
+r39770 site-manage
+r39769 gradebook
+r39766 site-manage
+r39765 gradebook
+   ...
+r39749 bspace
+r39746 bspace
+r39745 providers
+r39744 oncourse
+r39743 gradebook
+r39742 gradebook
+There were 27 subject lines
+ 
+ 
+Here is the output from mbox.txt:
+ 
+Enter a file name: mbox.txt
+r39772 content
+r39771 bspace
+r39770 site-manage
+r39769 gradebook
+   ...
+r37110 ctools
+r37109 osp
+r37108 content
+r37107 ctools
+There were 1780 subject lines
+ 
+
+2. In this problem, we will figure out if two balls are colliding. You¡¦ll need to remember how to unpack tuples();  or ask an TA if this is confusing.
+We will think in 2D to simplify things, though 3D isn¡¦t different conceptually. For calculating collision, we only care about a ball¡¦s position in space, as well as its size. We can store a ball¡¦s position with the (x, y) coordinates of its center point, and we can calculate its size if we know its radius. Thus, we represent a ball in 2D space as a tuple of (x, y, r).
+To figure out if two balls are colliding, we need to compute the distance between their centers, then see if this distance is less than or equal to the sum of their radius. If so, they are colliding.
+
+The program should keep prompting users to enter the position and the size of the two balls, and show whether the two balls are colliding until the user types ¡§exit¡¨, regardless of the case. The program should also capture users¡¦ bad input for specific ball information. 
+
+Sample Execution:
+
+Collision
+Enter the first ball (x,y,range), enter ¡§exit¡¨ to quit the program: (4,10,30)
+Enter the second ball (x,y,range), enter ¡§exit¡¨ to quit the program: (4,30,20)
+
+The two balls are colliding!
+
+No Collision
+Enter the first ball (x,y,range), enter ¡§exit¡¨ to quit the program: (6,10,1)
+Enter the second ball (x,y,range), enter ¡§exit¡¨ to quit the program: (4,30,2)
+
+The two balls are not colliding!
+
+
+Handling Bad Input
+Enter the first ball (x,y,range), enter ¡§exit¡¨ to quit the program: (6,10,10)
+Enter the second ball (x,y,range), enter ¡§exit¡¨ to quit the program: (4,3020)
+
+Bad input! 
+Enter the second ball (x,y,range), enter ¡§exit¡¨ to quit the program: (4,30,20)
+
+The two balls are colliding!
+
+
+Four attempt
+Enter the first ball (x,y,range), enter ¡§exit¡¨ to quit the program: ExiT
+
+Thank you. Byebye!

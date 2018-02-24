@@ -1,6 +1,3 @@
-#Homework 9-2.py, which is uploaded alone with homework 10, is the correct file of homework 9-2.
-#The file uploaded in homework 9 is the wrong one.
-
 import socket
 import re
 mysoc = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 

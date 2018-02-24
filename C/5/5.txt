@@ -1,0 +1,13 @@
+1.    Write a program that asks user to enter a fraction, then reduces the fraction to lowest terms:
+Enter a fraction: 6/12
+In lowest terms: 1/2
+ 
+ 
+This program must include the following function:
+void reduce ( int numerator, int denominator, int * reduce _ numerator, int * reduce _ denominator);
+ 
+numerator and denominator are the numerator and denominator of a fraction. reduce _ numerator and reduce _ denominator are pointers to variables in which the function will store the numerator and denominator of the fraction once it has been reduced to lowest terms.
+ 
+Hint: To reduce a fraction to lowest terms, first compute the GCD of the numerator and denominator. Then divide both the numerator and denominator by the GCD.
+ 
+2.    Simplify the exercise 2(b) at Lab 6 by taking advantage of the fact that an array name can be used as a pointer.

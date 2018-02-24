@@ -1,0 +1,13 @@
+1-1. Write a socket program to prompt the user for the URL so it can read any web page. In addition, the program should do the two following tasks:
+
+a. The program should counts the number of characters it has received and stops displaying any text after it has shown 3000 characters. The program should retrieve the entire document and count the total number of characters and display the count of the number of characters at the end of the document. 
+b. The program should do error checking to handle the condition where the user enters an improperly formatted or non-existent URL. 
+                            
+Hint: a host name is embedded in the URL entered by the user.
+                    
+    
+            
+1-2. Use urllib to replicate the previous exercise of (1) retrieving the document from a URL, (2) displaying up to 3000 characters, and (3) counting the overall number of characters in the document.        
+    
+
+2. Use urllib and BeautifulSoup to find out the links to the camera images at URL (http://www.shopping.com/camera/products?CLT=SAS&KW=camera). Print out all of these links. 
